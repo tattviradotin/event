@@ -72,7 +72,7 @@ export default function Hero() {
           </button>
         </div>
 
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-[150px] lg:gap-[250px] max-w-4xl mx-auto w-full">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-[80px] lg:gap-[120px] max-w-2xl mx-auto w-full">
           {[
             { icon: <Calendar size={18} />, label: 'Event Date', value: 'April 21, 2026' },
             { icon: <Users size={18} />, label: 'Team Size', value: '2 – 4 Members' },
