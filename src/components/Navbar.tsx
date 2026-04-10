@@ -120,14 +120,8 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="lg:hidden fixed inset-0 z-[100]">
-          {/* Opaque backdrop */}
-          <div 
-            className="absolute inset-0 bg-black" 
-            onClick={() => setMenuOpen(false)}
-          />
-          
-          <div className="absolute top-0 right-0 h-full w-[280px] bg-black border-l border-white/10 flex flex-col p-8 pt-20 animate-in slide-in-from-right duration-300">
+        <div className="lg:hidden fixed inset-0 z-[1000] bg-black flex justify-end">
+          <div className="h-full w-[280px] bg-black border-l border-white/10 flex flex-col p-8 pt-20 animate-in slide-in-from-right duration-300 relative">
             {/* Close Button Inside Menu */}
             <button 
               onClick={() => setMenuOpen(false)}
