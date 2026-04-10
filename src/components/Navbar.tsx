@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logo from '../images/logo.png';
 
 const navLinks = [
   { label: 'College', href: '#college' },
@@ -97,7 +98,16 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="lg:hidden flex items-center justify-end py-2">
+        <div className="lg:hidden flex items-center justify-between py-2">
+          <a 
+            href="https://svcengg.edu.in" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-3"
+          >
+            <img src={logo} alt="College Logo" className="h-14 w-auto object-contain" />
+          </a>
+          
           <button
             className="text-white p-2"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -110,13 +120,13 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[80px] bg-black/98 backdrop-blur-xl border-t border-amber-900/20 px-8 py-10 flex flex-col gap-6 overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-[70px] bg-black/98 backdrop-blur-2xl border-t border-amber-900/20 px-8 py-8 flex flex-col gap-4 overflow-y-auto">
 
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className={`text-lg tracking-widest uppercase font-bold text-left py-2 border-b border-white/5 ${
+              className={`text-base tracking-widest uppercase font-bold text-left py-3 border-b border-white/5 ${
                 activeSection === link.href ? 'text-amber-500' : 'text-gray-300'
               }`}
             >

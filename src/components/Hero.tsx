@@ -35,7 +35,7 @@ export default function Hero() {
           href="https://svcengg.edu.in" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-block mb-8 group transition-transform duration-300 hover:scale-105"
+          className="hidden lg:inline-block mb-8 group transition-transform duration-300 hover:scale-105"
         >
           <img src={logo} alt="College Logo" className="h-24 md:h-32 w-auto object-contain" />
         </a>
