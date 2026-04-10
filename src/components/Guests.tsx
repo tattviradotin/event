@@ -21,7 +21,7 @@ const guests = [
     linkedin: 'https://www.linkedin.com/in/vanditha-hitha-5342330?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     bio: 'Senior Associate Consultant at Tata Consultancy Services, specializing in RPA solutions using Kofax Kapow and Power Automate, with expertise in Python, DevOps, and Agile methodologies.',
     type: 'Judge',
-    position: 'object-[center_85%]',
+    position: 'object-[center_100%]',
   }
 ];
 
@@ -49,7 +49,7 @@ export default function Guests() {
                 <img
                   src={guest.photo}
                   alt={guest.name}
-                  className={`w-full h-full object-cover ${guest.position} scale-125 opacity-90 group-hover:opacity-100 group-hover:scale-140 transition-all duration-500`}
+                  className={`w-full h-full object-cover ${guest.position} scale-130 opacity-90 group-hover:opacity-100 group-hover:scale-145 transition-all duration-500`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
                 <div className="absolute top-3 left-3">
