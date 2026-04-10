@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center pt-18 sm:pt-24 lg:pt-34 pb-20 overflow-hidden bg-black"
+      className="relative min-h-screen flex flex-col items-center justify-center pt-32 sm:pt-40 lg:pt-48 pb-20 overflow-hidden bg-black"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-amber-500/5 blur-[120px]" />
