@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 import hod from '../images/HOD.png';
 import gp from '../images/GP.png';
@@ -12,35 +12,30 @@ const faculty = [
     role: 'Event Patron',
     dept: 'Head of Department, CSE-AI',
     photo: hod,
-    email: 'suresh.kumar@college.edu',
   },
   {
     name: 'D. Geetha Pawar',
     role: 'Faculty Coordinator',
     dept: 'Associate Professor, CSE-AI',
     photo: gp,
-    email: 'anita.rao@college.edu',
   },
   {
     name: 'Prof. Prathibha A',
     role: 'Faculty Coordinator',
     dept: 'Assistant Professor, CSE-AI',
     photo: pr,
-    email: 'anita.rao@college.edu',
   },
   {
     name: 'Prof. Vimala Devi R',
     role: 'Faculty Coordinator',
     dept: 'Assistant Professor, CSE-AI',
     photo: v,
-    email: 'anita.rao@college.edu',
   },
   {
     name: 'Prof. Preeti M Handiwadi',
     role: 'Faculty Coordinator',
     dept: 'Assistant Professor, CSE-AI',
     photo: pe,
-    email: 'vinod.pillai@college.edu',
   },
 ];
 
@@ -50,13 +45,11 @@ function PersonCard({
   name,
   role,
   sub,
-  email,
 }: {
   photo: string;
   name: string;
   role: string;
   sub: string;
-  email?: string;
 }) {
   return (
     <div className="group flex flex-col items-center text-center p-5 rounded-2xl border border-white/5 bg-white/2 hover:border-amber-500/20 hover:bg-amber-500/3 transition-all duration-300">
@@ -70,23 +63,18 @@ function PersonCard({
       <h4 className="text-white font-bold text-sm">{name}</h4>
       <p className="text-amber-500 text-xs mt-0.5 font-medium">{role}</p>
       <p className="text-gray-600 text-xs mt-0.5">{sub}</p>
-      {email && (
-        <div className="flex gap-3 mt-3">
-          <a href={`mailto:${email}`} className="text-gray-600 hover:text-amber-500 transition-colors">
-            <Mail size={14} />
-          </a>
-          <a href="#" className="text-gray-600 hover:text-amber-500 transition-colors">
-            <Linkedin size={14} />
-          </a>
-        </div>
-      )}
+      <div className="flex gap-3 mt-3">
+        <a href="#" className="text-gray-600 hover:text-amber-500 transition-colors">
+          <Linkedin size={14} />
+        </a>
+      </div>
     </div>
   );
 }
 
 export default function Organizers() {
   return (
-    <section id="organizers" className="pt-6 pb-16 bg-[#050505]">
+    <section id="organizers" className="pt-6 pb-6 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-amber-500 text-xs tracking-[0.4em] uppercase font-semibold mb-4">
@@ -105,13 +93,13 @@ export default function Organizers() {
           <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto mb-6">
             {faculty.slice(0, 2).map((f) => (
               <div key={f.name} className="w-full sm:w-1/2">
-                <PersonCard photo={f.photo} name={f.name} role={f.role} sub={f.dept} email={f.email} />
+                <PersonCard photo={f.photo} name={f.name} role={f.role} sub={f.dept} />
               </div>
             ))}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {faculty.slice(2, 5).map((f) => (
-              <PersonCard key={f.name} photo={f.photo} name={f.name} role={f.role} sub={f.dept} email={f.email} />
+              <PersonCard key={f.name} photo={f.photo} name={f.name} role={f.role} sub={f.dept} />
             ))}
           </div>
         </div>
