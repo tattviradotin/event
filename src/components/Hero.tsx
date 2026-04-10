@@ -64,15 +64,9 @@ export default function Hero() {
             Apply Now
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
-          <button
-            onClick={scrollToAbout}
-            className="px-8 py-4 border border-white/10 hover:border-amber-500/40 text-white hover:text-amber-400 font-medium text-sm tracking-widest uppercase rounded transition-all duration-300 hover:bg-amber-500/5"
-          >
-            Learn More
-          </button>
         </div>
 
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-[40px] lg:gap-[60px] max-w-2xl mx-auto w-full">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-[16px] lg:gap-[24px] max-w-2xl mx-auto w-full">
           {[
             { icon: <Calendar size={18} />, label: 'Event Date', value: 'April 21, 2026' },
             { icon: <Users size={18} />, label: 'Team Size', value: '2 – 4 Members' },
