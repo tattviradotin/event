@@ -53,18 +53,23 @@ export default function Sponsors() {
 
             <div className="hidden sm:block w-px bg-white/10" />
 
-            <div className="flex flex-col items-center justify-between gap-6 w-full sm:w-72">
+            <a 
+              href="https://www.tattvira.in" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex flex-col items-center justify-between gap-6 w-full sm:w-72 group cursor-pointer"
+            >
               <div className="h-20 flex items-center justify-center w-full">
                 <img
                   src={tattviraLogo}
                   alt="Tattvira"
-                  className="max-h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
+                  className="max-h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <span className="text-white font-black text-[20px] tracking-[0.2em] uppercase text-center leading-relaxed">
+              <span className="text-white font-black text-[20px] tracking-[0.2em] uppercase text-center leading-relaxed group-hover:text-amber-500 transition-colors">
                 TATTVIRA PRIVATE LIMITED
               </span>
-            </div>
+            </a>
           </div>
         </div>
       </div>

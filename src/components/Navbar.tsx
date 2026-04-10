@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '../images/logo.png';
+import tattviraLogo from '../images/WHITE_TATTVIRA.png';
 
 const navLinks = [
   { label: 'College', href: '#college' },
@@ -70,10 +71,13 @@ export default function Navbar() {
       <div className="w-full px-6 sm:px-10 lg:px-14">
         {/* Desktop Layout */}
         <div className="hidden lg:flex items-center justify-between gap-6 py-4">
-          <div className="flex-shrink-0 flex flex-col border-l-0 pl-0 max-w-[180px] xl:max-w-none">
+          <button 
+            onClick={() => handleNav('#hero')}
+            className="flex-shrink-0 flex flex-col border-l-0 pl-0 max-w-[180px] xl:max-w-none hover:opacity-80 transition-opacity text-left"
+          >
             <h1 className="text-white font-black text-xs xl:text-sm tracking-wider uppercase leading-none">CSE (Artificial Intelligence)</h1>
             <p className="text-amber-500 font-bold text-[9px] xl:text-[10px] tracking-[0.15em] xl:tracking-[0.2em] uppercase mt-1">AI-Powered Solution Expo</p>
-          </div>
+          </button>
 
           <div className="flex-1 flex justify-center">
             <div className="flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-8">
@@ -101,8 +105,25 @@ export default function Navbar() {
             >
               Apply Now
             </a>
-            <div className="border-l border-white/10 pl-6 h-12 flex items-center">
-              <a href="#hero" onClick={() => handleNav('#hero')} className="group block">
+            <div className="border-l border-white/10 pl-6 h-12 flex items-center gap-4">
+              <a 
+                href="https://www.tattvira.in" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group block"
+              >
+                <img 
+                  src={tattviraLogo} 
+                  alt="Tattvira Logo" 
+                  className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                />
+              </a>
+              <a 
+                href="https://svcengg.edu.in" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group block"
+              >
                 <img 
                   src={logo} 
                   alt="College Logo" 
@@ -132,10 +153,13 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div className="lg:hidden fixed inset-0 top-[80px] bg-black/98 backdrop-blur-xl border-t border-amber-900/20 px-8 py-10 flex flex-col gap-6 overflow-y-auto">
-          <div className="mb-4">
-            <h1 className="text-white font-black text-xl tracking-wider uppercase leading-none">CSE-AI</h1>
+          <button 
+            onClick={() => { handleNav('#hero'); setMenuOpen(false); }}
+            className="mb-4 text-left"
+          >
+            <h1 className="text-white font-black text-xl tracking-wider uppercase leading-none hover:text-amber-500 transition-colors">CSE-AI</h1>
             <p className="text-amber-500 text-xs tracking-[0.3em] uppercase mt-2">Solution Expo 2026</p>
-          </div>
+          </button>
 
           {navLinks.map((link) => (
             <button
