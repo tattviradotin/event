@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center pt-20 sm:pt-28 lg:pt-36 pb-20 overflow-hidden bg-black"
+      className="relative min-h-screen flex flex-col items-center justify-center pt-18 sm:pt-24 lg:pt-34 pb-20 overflow-hidden bg-black"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-amber-500/5 blur-[120px]" />
@@ -35,30 +35,23 @@ export default function Hero() {
           href="https://svcengg.edu.in" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-block mb-12 group transition-transform duration-300 hover:scale-105"
+          className="inline-block mb-8 group transition-transform duration-300 hover:scale-105"
         >
-          <img src={logo} alt="College Logo" className="h-28 md:h-36 w-auto object-contain" />
+          <img src={logo} alt="College Logo" className="h-24 md:h-32 w-auto object-contain" />
         </a>
-
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/5 mb-10">
-          <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-          <span className="text-amber-400 text-xs tracking-[0.3em] uppercase font-medium">
-            Registrations Open
-          </span>
-        </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight mb-4">
           ARTIFICIAL INTELLIGENCE 
           <span className="block text-amber-500">SOLUTION EXPO</span>
-          <span className="block text-3xl md:text-4xl lg:text-5xl font-light text-gray-400 tracking-[0.2em] mt-2">
+          <span className="block text-2xl md:text-3xl lg:text-4xl font-light text-gray-400 tracking-[0.2em] mt-2">
             2026
           </span>
-          <span className="block text-sm md:text-base font-bold text-white tracking-[0.4em] uppercase mt-6">
+          <span className="block text-xs md:text-sm font-bold text-white tracking-[0.4em] uppercase mt-4">
             Organised by CSE (Artificial Intelligence)
           </span>
         </h1>
 
-        <p className="mt-8 text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-6 text-gray-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
           A premier showcase where innovation meets excellence. <br />
           Present your vision, compete with the best, and redefine the future.
         </p>
