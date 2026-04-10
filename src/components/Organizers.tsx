@@ -5,8 +5,6 @@ import gp from '../images/GP.png';
 import pr from '../images/PR.png';
 import v from '../images/v.png';
 import pe from '../images/PE.png';
-import ps from '../images/PS.jpeg';
-import pk from '../images/PK.jpeg';
 
 const faculty = [
   {
@@ -38,18 +36,6 @@ const faculty = [
     role: 'Faculty Coordinator',
     dept: 'Assistant Professor, CSE-AI',
     photo: pe,
-  },
-  {
-    name: 'Prof. Pranitha S',
-    role: 'Faculty Coordinator',
-    dept: 'Assistant Professor, CSE-AI',
-    photo: ps,
-  },
-  {
-    name: 'Prof. Prashanth Kumar',
-    role: 'Faculty Coordinator',
-    dept: 'Assistant Professor, CSE-AI',
-    photo: pk,
   },
 ];
 
@@ -107,8 +93,8 @@ export default function Organizers() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
-            {faculty.slice(2, 7).map((f) => (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {faculty.slice(2, 5).map((f) => (
               <PersonCard key={f.name} photo={f.photo} name={f.name} role={f.role} sub={f.dept} />
             ))}
           </div>
