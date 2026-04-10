@@ -121,9 +121,9 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div className="lg:hidden fixed inset-0 z-[100]">
-          {/* Backdrop to close when tapping outside */}
+          {/* Opaque backdrop */}
           <div 
-            className="absolute inset-0 bg-black/40 backdrop-blur-sm" 
+            className="absolute inset-0 bg-black" 
             onClick={() => setMenuOpen(false)}
           />
           
