@@ -120,36 +120,45 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-3xl z-[100] flex flex-col items-center justify-center p-8 gap-2">
-          {/* Close Button Inside Menu */}
-          <button 
+        <div className="lg:hidden fixed inset-0 z-[100]">
+          {/* Backdrop to close when tapping outside */}
+          <div 
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm" 
             onClick={() => setMenuOpen(false)}
-            className="absolute top-6 right-6 text-white p-2"
-          >
-            <X size={32} />
-          </button>
-
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNav(link.href)}
-              className={`text-sm tracking-[0.2em] uppercase font-bold text-center py-3 w-full transition-all duration-300 ${
-                activeSection === link.href ? 'text-amber-500' : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              {link.label}
-            </button>
-          ))}
+          />
           
-          <a
-            href="https://forms.gle/wB85hFJQGzHXXBAU7"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 px-10 py-4 bg-amber-500 text-black text-[12px] font-black tracking-widest uppercase rounded-sm text-center shadow-2xl shadow-amber-500/40"
-          >
-            Apply Now
-          </a>
+          <div className="absolute top-0 right-0 h-full w-[280px] bg-black border-l border-white/10 flex flex-col p-8 pt-20 animate-in slide-in-from-right duration-300">
+            {/* Close Button Inside Menu */}
+            <button 
+              onClick={() => setMenuOpen(false)}
+              className="absolute top-6 right-6 text-white p-2"
+            >
+              <X size={24} />
+            </button>
 
+            <div className="flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <button
+                  key={link.href}
+                  onClick={() => handleNav(link.href)}
+                  className={`text-sm tracking-[0.2em] uppercase font-bold text-left py-4 w-full transition-all duration-300 border-b border-white/5 ${
+                    activeSection === link.href ? 'text-amber-500' : 'text-gray-300 hover:text-white'
+                  }`}
+                >
+                  {link.label}
+                </button>
+              ))}
+              
+              <a
+                href="https://forms.gle/wB85hFJQGzHXXBAU7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 px-6 py-4 bg-amber-500 text-black text-[12px] font-black tracking-widest uppercase rounded-sm text-center shadow-2xl shadow-amber-500/40"
+              >
+                Apply Now
+              </a>
+            </div>
+          </div>
         </div>
       )}
     </nav>
