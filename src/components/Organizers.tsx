@@ -1,4 +1,4 @@
-import { Linkedin } from 'lucide-react';
+
 
 import hod from '../images/HOD.png';
 import gp from '../images/GP.png';
@@ -63,11 +63,7 @@ function PersonCard({
       <h4 className="text-white font-bold text-sm">{name}</h4>
       <p className="text-amber-500 text-xs mt-0.5 font-medium">{role}</p>
       <p className="text-gray-600 text-xs mt-0.5">{sub}</p>
-      <div className="flex gap-3 mt-3">
-        <a href="#" className="text-gray-600 hover:text-amber-500 transition-colors">
-          <Linkedin size={14} />
-        </a>
-      </div>
+
     </div>
   );
 }
