@@ -46,7 +46,7 @@ const statusStyle: Record<string, string> = {
 
 export default function Timeline() {
   return (
-    <section id="timeline" className="py-28 bg-[#050505]">
+    <section id="timeline" className="py-16 bg-[#050505]">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-amber-500 text-xs tracking-[0.4em] uppercase font-semibold mb-4">

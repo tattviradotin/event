@@ -25,7 +25,7 @@ const highlights = [
 
 export default function AboutEvent() {
   return (
-    <section id="about" className="py-28 bg-black">
+    <section id="about" className="py-16 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div>

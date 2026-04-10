@@ -86,7 +86,7 @@ function PersonCard({
 
 export default function Organizers() {
   return (
-    <section id="organizers" className="py-28 bg-[#050505]">
+    <section id="organizers" className="py-16 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-amber-500 text-xs tracking-[0.4em] uppercase font-semibold mb-4">

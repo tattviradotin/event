@@ -30,7 +30,7 @@ export default function AboutCollege() {
   }, []);
 
   return (
-    <section id="college" className="py-28 bg-[#050505]">
+    <section id="college" className="py-16 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="relative">

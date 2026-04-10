@@ -43,7 +43,7 @@ const prizes = [
 
 export default function Prizes() {
   return (
-    <section id="prizes" className="py-28 bg-black">
+    <section id="prizes" className="py-16 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-24">
           <p className="text-amber-500 text-xs tracking-[0.4em] uppercase font-semibold mb-4">
