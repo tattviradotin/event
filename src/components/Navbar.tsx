@@ -76,7 +76,7 @@ export default function Navbar() {
                 <button
                   key={link.href}
                   onClick={() => handleNav(link.href)}
-                  className={`text-[11px] xl:text-[12px] tracking-[0.2em] uppercase font-bold transition-all duration-300 relative group ${
+                  className={`text-[13px] xl:text-[14px] tracking-[0.2em] uppercase font-bold transition-all duration-300 relative group ${
                     activeSection === link.href ? 'text-amber-500' : 'text-gray-200 hover:text-white'
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function Navbar() {
                 href="https://forms.gle/wB85hFJQGzHXXBAU7"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-2 bg-amber-500 hover:bg-amber-400 text-black text-[11px] font-black tracking-widest uppercase rounded-sm transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/40 whitespace-nowrap"
+                className="px-6 py-2.5 bg-amber-500 hover:bg-amber-400 text-black text-[13px] font-black tracking-widest uppercase rounded-sm transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/40 whitespace-nowrap"
               >
                 Apply Now
               </a>
