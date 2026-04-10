@@ -121,11 +121,14 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay - Moved outside nav for clean stacking */}
       {menuOpen && (
-        <div 
-          className="lg:hidden fixed inset-0 z-[9999] flex justify-end"
-          style={{ backgroundColor: '#000000', opacity: 1 }}
-        >
-          <div className="h-full w-[280px] bg-black border-l border-white/10 flex flex-col p-8 pt-20 animate-in slide-in-from-right duration-300 relative">
+        <div className="lg:hidden fixed inset-0 z-[9999] flex justify-end">
+          {/* Semi-transparent backdrop to close menu */}
+          <div 
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm" 
+            onClick={() => setMenuOpen(false)}
+          />
+          
+          <div className="h-full w-[280px] bg-black border-l border-white/10 flex flex-col p-8 pt-20 animate-in slide-in-from-right duration-300 relative shadow-2xl">
             {/* Close Button Inside Menu */}
             <button 
               onClick={() => setMenuOpen(false)}
