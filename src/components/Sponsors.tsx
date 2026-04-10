@@ -46,7 +46,7 @@ export default function Sponsors() {
                   className="max-h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <span className="text-white font-black text-[10px] tracking-[0.2em] uppercase text-center leading-relaxed">
+              <span className="text-white font-black text-[20px] tracking-[0.2em] uppercase text-center leading-relaxed">
                 REVERSEGAZE TECHNOLOGIES LLP
               </span>
             </div>
@@ -61,7 +61,7 @@ export default function Sponsors() {
                   className="max-h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <span className="text-white font-black text-[10px] tracking-[0.2em] uppercase text-center leading-relaxed">
+              <span className="text-white font-black text-[20px] tracking-[0.2em] uppercase text-center leading-relaxed">
                 TATTVIRA PRIVATE LIMITED
               </span>
             </div>
