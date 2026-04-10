@@ -47,7 +47,7 @@ export default function Hero() {
             2026
           </span>
           <span className="block text-xs md:text-sm font-bold text-white tracking-[0.4em] uppercase mt-4">
-            Organised by Department of <span className="text-amber-500">CSE (Artificial Intelligence)</span>
+            Organised by Department of <span className="text-amber-500 font-black">CSE (Artificial Intelligence)</span>
           </span>
         </h1>
 
