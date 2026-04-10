@@ -33,8 +33,8 @@ export default function Footer() {
                 <Cpu size={18} className="text-black" />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="text-white font-bold text-sm tracking-widest uppercase">CSE ( Artificial Intelligence)</span>
-                <span className="text-amber-500 text-xs tracking-[0.2em] uppercase">AI Powered Solution Expo 2026</span>
+                <span className="text-white font-bold text-xs sm:text-sm tracking-widest uppercase leading-tight">CSE ( Artificial Intelligence)</span>
+                <span className="text-amber-500 text-[10px] sm:text-xs tracking-[0.2em] uppercase">AI Powered Solution Expo 2026</span>
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mt-4 max-w-xs">

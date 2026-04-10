@@ -43,7 +43,7 @@ export default function Guests() {
           {guests.map((guest) => (
             <div
               key={guest.name}
-              className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(40%-1rem)] group relative rounded-2xl border border-white/5 bg-white/2 overflow-hidden hover:border-amber-500/20 transition-all duration-300 hover:-translate-y-1"
+              className="w-full sm:w-[calc(50%-1rem)] lg:w-80 group relative rounded-2xl border border-white/5 bg-white/2 overflow-hidden hover:border-amber-500/20 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="relative h-72 overflow-hidden">
                 <img

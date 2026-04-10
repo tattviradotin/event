@@ -16,7 +16,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('#hero');
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -26,12 +26,22 @@ export default function Navbar() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(`#${entry.target.id}`);
+            const id = `#${entry.target.id}`;
+            // When the hero section is visible, clear the active link
+            if (id === '#hero') {
+              setActiveSection('');
+            } else {
+              setActiveSection(id);
+            }
           }
         });
       },
       { threshold: 0.3 }
     );
+
+    // Also observe the hero section to detect when user is at the top
+    const heroEl = document.querySelector('#hero');
+    if (heroEl) observer.observe(heroEl);
 
     navLinks.forEach((link) => {
       const el = document.querySelector(link.href);
@@ -60,13 +70,13 @@ export default function Navbar() {
       <div className="w-full px-6 sm:px-10 lg:px-14">
         {/* Desktop Layout */}
         <div className="hidden lg:flex items-center justify-between gap-6 py-4">
-          <div className="flex-shrink-0 flex flex-col border-l-0 pl-0">
-            <h1 className="text-white font-black text-sm tracking-wider uppercase leading-none">CSE (Artificial Intelligence)</h1>
-            <p className="text-amber-500 font-bold text-[10px] tracking-[0.2em] uppercase mt-1">AI-Powered Solution Expo</p>
+          <div className="flex-shrink-0 flex flex-col border-l-0 pl-0 max-w-[180px] xl:max-w-none">
+            <h1 className="text-white font-black text-xs xl:text-sm tracking-wider uppercase leading-none">CSE (Artificial Intelligence)</h1>
+            <p className="text-amber-500 font-bold text-[9px] xl:text-[10px] tracking-[0.15em] xl:tracking-[0.2em] uppercase mt-1">AI-Powered Solution Expo</p>
           </div>
 
           <div className="flex-1 flex justify-center">
-            <div className="flex items-center gap-x-6 xl:gap-x-8">
+            <div className="flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-8">
               {navLinks.map((link) => (
                 <button
                   key={link.href}

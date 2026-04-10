@@ -57,7 +57,7 @@ export default function Prizes() {
             <div
               key={prize.position}
               className={`relative w-full md:w-72 rounded-3xl border p-8 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 shadow-2xl ${prize.border} ${prize.bg} ${prize.glow} ${
-                prize.featured ? 'md:-translate-y-8 scale-105 md:scale-110' : ''
+                prize.featured ? 'md:-translate-y-8 md:scale-110' : ''
               }`}
             >
               {prize.featured && (

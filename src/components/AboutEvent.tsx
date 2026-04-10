@@ -27,7 +27,7 @@ export default function AboutEvent() {
   return (
     <section id="about" className="py-28 bg-black">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div>
             <p className="text-amber-500 text-xs tracking-[0.4em] uppercase font-semibold mb-4">
               About the Event

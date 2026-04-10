@@ -32,7 +32,7 @@ export default function AboutCollege() {
   return (
     <section id="college" className="py-28 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="relative">
             <div className="absolute -inset-4 bg-amber-500/5 rounded-3xl blur-2xl" />
             <div className="relative rounded-2xl overflow-hidden border border-white/5">

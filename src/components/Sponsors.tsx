@@ -37,7 +37,7 @@ export default function Sponsors() {
           </p>
 
           {/* Key Partners Section */}
-          <div className="mt-16 flex flex-col sm:flex-row items-stretch justify-center gap-12 md:gap-20 p-12 rounded-3xl border border-white/5 bg-white/2 backdrop-blur-xl">
+          <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-12 md:gap-20 p-8 sm:p-12 rounded-3xl border border-white/5 bg-white/2 backdrop-blur-xl">
             <div className="flex flex-col items-center justify-between gap-6 w-full sm:w-72">
               <div className="h-20 flex items-center justify-center w-full">
                 <img
