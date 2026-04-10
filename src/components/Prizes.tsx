@@ -45,7 +45,7 @@ export default function Prizes() {
   return (
     <section id="prizes" className="pt-16 pb-6 bg-black">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-20">
           <p className="text-amber-500 text-xs tracking-[0.4em] uppercase font-semibold mb-4">
             Rewards
           </p>
