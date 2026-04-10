@@ -72,14 +72,14 @@ export default function Hero() {
           </button>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-[150px] lg:gap-[250px] max-w-4xl mx-auto w-full">
           {[
             { icon: <Calendar size={18} />, label: 'Event Date', value: 'April 21, 2026' },
             { icon: <Users size={18} />, label: 'Team Size', value: '2 – 4 Members' },
           ].map((item) => (
             <div
               key={item.label}
-              className="flex flex-col items-center gap-2 px-4 py-4 rounded-xl border border-white/5 bg-white/3 backdrop-blur-sm"
+              className="flex-1 w-full max-w-[240px] flex flex-col items-center gap-2 px-6 py-4 rounded-xl border border-white/5 bg-white/3 backdrop-blur-sm"
             >
               <span className="text-amber-500">{item.icon}</span>
               <span className="text-gray-500 text-xs tracking-widest uppercase">{item.label}</span>
