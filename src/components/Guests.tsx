@@ -27,9 +27,9 @@ const guests = [
 
 export default function Guests() {
   return (
-    <section id="guests" className="pt-6 pb-16 bg-black">
+    <section id="guests" className="py-16 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <p className="text-amber-500 text-xs tracking-[0.4em] uppercase font-semibold mb-4">
             Distinguished Guests
           </p>

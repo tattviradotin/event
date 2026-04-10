@@ -12,7 +12,7 @@ export default function ApplyCTA() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-amber-500/5 blur-[120px]" />
       </div>
       <div className="relative max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <p className="text-amber-500 text-xs tracking-[0.4em] uppercase font-semibold mb-4">
             Get Started
           </p>
