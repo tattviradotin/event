@@ -68,25 +68,23 @@ export default function Navbar() {
     >
       <div className="w-full px-6 sm:px-10 lg:px-14">
         {/* Desktop Layout */}
-        <div className="hidden lg:flex items-center justify-between gap-6 py-4">
-          <div className="flex-1 flex justify-center">
-            <div className="flex items-center gap-x-4 lg:gap-x-5 xl:gap-x-8 text-center ml-auto">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => handleNav(link.href)}
-                  className={`text-[12px] tracking-[0.2em] uppercase font-bold transition-all duration-300 relative group ${
-                    activeSection === link.href ? 'text-amber-500' : 'text-gray-200 hover:text-white'
-                  }`}
-                >
-                  {link.label}
-                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 group-hover:w-full ${activeSection === link.href ? 'w-full' : ''}`} />
-                </button>
-              ))}
-            </div>
+        <div className="hidden lg:flex items-center justify-center gap-12 py-4">
+          <div className="flex items-center gap-x-6 xl:gap-x-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.href}
+                onClick={() => handleNav(link.href)}
+                className={`text-[11px] xl:text-[12px] tracking-[0.2em] uppercase font-bold transition-all duration-300 relative group ${
+                  activeSection === link.href ? 'text-amber-500' : 'text-gray-200 hover:text-white'
+                }`}
+              >
+                {link.label}
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-500 transition-all duration-300 group-hover:w-full ${activeSection === link.href ? 'w-full' : ''}`} />
+              </button>
+            ))}
           </div>
 
-          <div className="flex-shrink-0 flex items-center gap-6">
+          <div className="flex items-center border-l border-white/10 pl-12">
             <a
               href="https://forms.gle/wB85hFJQGzHXXBAU7"
               target="_blank"
