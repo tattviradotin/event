@@ -120,14 +120,21 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {menuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[70px] bg-black/98 backdrop-blur-2xl border-t border-amber-900/20 px-8 py-8 flex flex-col gap-4 overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-3xl z-[100] flex flex-col items-center justify-center p-8 gap-2">
+          {/* Close Button Inside Menu */}
+          <button 
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-6 right-6 text-white p-2"
+          >
+            <X size={32} />
+          </button>
 
           {navLinks.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className={`text-base tracking-widest uppercase font-bold text-left py-3 border-b border-white/5 ${
-                activeSection === link.href ? 'text-amber-500' : 'text-gray-300'
+              className={`text-sm tracking-[0.2em] uppercase font-bold text-center py-3 w-full transition-all duration-300 ${
+                activeSection === link.href ? 'text-amber-500' : 'text-gray-300 hover:text-white'
               }`}
             >
               {link.label}
@@ -138,7 +145,7 @@ export default function Navbar() {
             href="https://forms.gle/wB85hFJQGzHXXBAU7"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 px-5 py-4 bg-amber-500 text-black text-sm font-black tracking-widest uppercase rounded text-center shadow-lg shadow-amber-500/20"
+            className="mt-8 px-10 py-4 bg-amber-500 text-black text-[12px] font-black tracking-widest uppercase rounded-sm text-center shadow-2xl shadow-amber-500/40"
           >
             Apply Now
           </a>
