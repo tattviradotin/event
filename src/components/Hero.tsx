@@ -1,4 +1,5 @@
 import { ArrowRight, Calendar, Users } from 'lucide-react';
+import logo from '../images/logo.png';
 
 export default function Hero() {
   const handleApply = () => {
@@ -30,6 +31,15 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <a 
+          href="https://svcengg.edu.in" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-block mb-10 group transition-transform duration-300 hover:scale-105"
+        >
+          <img src={logo} alt="College Logo" className="h-28 md:h-36 w-auto object-contain mx-auto" />
+        </a>
+
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/5 mb-8">
           <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
           <span className="text-amber-400 text-xs tracking-[0.3em] uppercase font-medium">
