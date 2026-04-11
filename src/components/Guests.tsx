@@ -1,6 +1,6 @@
 import { Linkedin } from 'lucide-react';
-import SG from '../images/SG.jpeg';
-import VG from '../images/VG.jpeg';
+const SG = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815144/SG_zzq0qx.jpg';
+const VG = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815146/VG_fcvvfr.jpg';
 
 const guests = [
   {

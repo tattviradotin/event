@@ -1,12 +1,10 @@
-
-
-import hod from '../images/HOD.png';
-import gp from '../images/GP.png';
-import pr from '../images/PR.png';
-import v from '../images/v.png';
-import pe from '../images/PE.png';
-import ps from '../images/PS.jpeg';
-import pk from '../images/PK.jpeg';
+const hod = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815144/HOD_izcd2p.png';
+const gp = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815144/GP_xwhk6s.png';
+const pr = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815145/PR_ysmldx.png';
+const v = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815145/v_pkfrmm.png';
+const pe = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815145/PE_cxej8l.png';
+const ps = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815143/PS_hnxq1q.jpg';
+const pk = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815142/PK_x7kruh.jpg';
 
 const faculty = [
   {

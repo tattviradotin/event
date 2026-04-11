@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { BookOpen, GraduationCap, Building2, Globe, ChevronLeft, ChevronRight } from 'lucide-react';
-import img1 from '../images/image 1.png';
-import img2 from '../images/Image 2.png';
-import img3 from '../images/Image 3.png';
-import img4 from '../images/Image 4.png';
-import img5 from '../images/Image 5.png';
-import img6 from '../images/Image 6.png';
-import img7 from '../images/Image 7.png';
-import img8 from '../images/Image 8.png';
-import img9 from '../images/Image 9.png';
+const img1 = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815149/image_1_twdanz.png';
+const img2 = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815150/Image_2_tghicr.png';
+const img3 = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815154/Image_3_w9glfs.png';
+const img4 = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815151/Image_4_y5mnwr.png';
+const img5 = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815151/Image_5_pjm7vs.png';
+const img6 = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815163/Image_6_s4b3ty.png';
+const img7 = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815156/Image_7_umjsvk.png';
+const img8 = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815155/Image_8_jhaxzf.png';
+const img9 = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815154/Image_9_loymwa.png';
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 

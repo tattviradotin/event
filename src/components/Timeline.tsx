@@ -4,7 +4,7 @@ const events = [
   {
     date: '9:00 AM',
     title: 'Registration Process',
-    venue: 'Central Dome',
+    venue: 'Welcome Centre',
     desc: 'Welcome and check-in for all participating teams. Please arrive on time to collect your event badges and kits.',
     status: 'active',
   },

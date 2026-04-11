@@ -1,5 +1,5 @@
-import tattviraLogo from '../images/WHITE_TATTVIRA.png';
-import llpLogo from '../images/llp.jpg';
+const tattviraLogo = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815143/WHITE_TATTVIRA_jibsnp.png';
+const llpLogo = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815142/llp_nand19.jpg';
 
 const tiers = [
   {

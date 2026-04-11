@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '../images/logo.png';
+const logo = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815152/logo_dyowew.png';
 
 const navLinks = [
   { label: 'College', href: '#college' },

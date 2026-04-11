@@ -1,5 +1,6 @@
 import { ArrowRight, Calendar, Users } from 'lucide-react';
-import logo from '../images/logo.png';
+
+const logo = 'https://res.cloudinary.com/dvceoq11s/image/upload/v1775815152/logo_dyowew.png';
 
 export default function Hero() {
   const handleApply = () => {
@@ -83,10 +84,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-20">
-        <span className="text-gray-600 text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-gray-600 to-transparent" />
-      </div>
+
     </section>
   );
 }
