@@ -14,7 +14,7 @@ const faculty = [
     photo: hod,
   },
   {
-    name: 'D. Geetha Pawar',
+    name: 'Dr. Geetha Pawar',
     role: 'Faculty Coordinator',
     dept: 'Associate Professor, CSE-AI',
     photo: gp,
