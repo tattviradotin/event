@@ -66,8 +66,6 @@ export default function Timeline() {
         </div>
 
         <div className="relative">
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-amber-500/50 via-amber-500/20 to-transparent md:-translate-x-1/2" />
-
           <div className="flex flex-col gap-10">
             {events.map((event, i) => {
               const isRight = i % 2 === 0;
@@ -77,6 +75,10 @@ export default function Timeline() {
                   className={`relative flex items-start gap-6 md:gap-0 ${isRight ? 'md:flex-row' : 'md:flex-row-reverse'
                     }`}
                 >
+                  {/* Line segment connecting to the next event */}
+                  {i !== events.length - 1 && (
+                    <div className="absolute left-6 top-[10px] md:left-1/2 md:top-[6px] w-px h-[calc(100%+2.5rem)] bg-amber-500 md:-translate-x-1/2 pointer-events-none z-0" />
+                  )}
                   <div
                     className={`hidden md:block w-1/2 ${isRight ? 'pr-12 text-right' : 'pl-12 text-left'}`}
                   >
