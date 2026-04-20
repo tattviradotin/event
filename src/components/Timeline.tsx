@@ -2,7 +2,7 @@ import { MapPin } from 'lucide-react';
 
 const events = [
   {
-    date: '9:00 AM',
+    date: '8:00 AM',
     title: 'Registration Process',
     venue: 'Welcome Centre',
     desc: 'Welcome and check-in for all participating teams. Please arrive on time to collect your event badges and kits.',
@@ -13,28 +13,35 @@ const events = [
     title: 'Inaugural Ceremony',
     venue: 'Seminar Hall',
     desc: 'Welcome address by the chief guest and a brief overview of the guidelines for the day.',
-    status: 'upcoming',
+    status: 'active',
   },
   {
-    date: '11:00 AM',
+    date: '10:30 AM',
     title: 'Presentations Start',
-    venue: 'Student Community Centre (Waiting: R101, R102)',
-    desc: 'Project presentations begin in the Student Community Centre. Please wait in the designated waiting rooms until your team is called.',
-    status: 'upcoming',
+    venue: 'Seminar Hall',
+    desc: 'Project presentations begin in the Seminar Hall. Please wait until your team is called.',
+    status: 'active',
+  },
+  {
+    date: '11:30 AM',
+    title: 'Refreshments',
+    venue: 'Seminar Hall',
+    desc: 'Refreshments will be provided for all participants.',
+    status: 'active',
   },
   {
     date: '1:00 PM',
     title: 'Networking Lunch',
     venue: '',
     desc: 'Lunch break and an opportunity to interact with mentors, judges, and fellow participants.',
-    status: 'upcoming',
+    status: 'active',
   },
   {
     date: '4:30 PM',
     title: 'Valedictory & Awards',
-    venue: 'Main Auditorium',
+    venue: 'Seminar Hall',
     desc: 'Winner announcements, prize distribution, and the official closing ceremony.',
-    status: 'upcoming',
+    status: 'active',
   },
 ];
 
@@ -67,42 +74,39 @@ export default function Timeline() {
               return (
                 <div
                   key={i}
-                  className={`relative flex items-start gap-6 md:gap-0 ${
-                    isRight ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
+                  className={`relative flex items-start gap-6 md:gap-0 ${isRight ? 'md:flex-row' : 'md:flex-row-reverse'
+                    }`}
                 >
                   <div
                     className={`hidden md:block w-1/2 ${isRight ? 'pr-12 text-right' : 'pl-12 text-left'}`}
                   >
                     <div
-                      className={`inline-block p-6 w-full max-w-sm rounded-2xl border transition-all duration-300 hover:border-amber-500/30 hover:bg-amber-500/3 ${
-                        event.status === 'done'
+                      className={`inline-block p-6 w-full max-w-sm rounded-2xl border transition-all duration-300 hover:border-amber-500/30 hover:bg-amber-500/3 ${event.status === 'done'
                           ? 'border-amber-500/20 bg-amber-500/5'
                           : event.status === 'active'
-                          ? 'border-amber-500/40 bg-amber-500/8'
-                          : 'border-white/5 bg-white/2'
-                      }`}
+                            ? 'border-amber-500/40 bg-amber-500/8'
+                            : 'border-white/5 bg-white/2'
+                        }`}
                     >
                       <div className={`mb-4 flex flex-col ${isRight ? 'items-end text-right' : 'items-start text-left'}`}>
                         <span
-                          className={`text-xs font-semibold tracking-widest uppercase mb-2 ${
-                            event.status === 'done' || event.status === 'active'
+                          className={`text-xs font-semibold tracking-widest uppercase mb-2 ${event.status === 'done' || event.status === 'active'
                               ? 'text-amber-500'
                               : 'text-gray-600'
-                          }`}
+                            }`}
                         >
                           {event.date}
                         </span>
                         <h3 className="text-white text-xl font-bold">{event.title}</h3>
                       </div>
-                      
+
                       {event.venue && (
                         <div className={`flex items-center gap-2 text-amber-500/90 text-sm font-medium mb-4 bg-amber-500/10 px-3 py-1.5 rounded-lg w-fit ${isRight ? 'ml-auto' : ''}`}>
                           <MapPin size={16} className="shrink-0" />
                           <span>{event.venue}</span>
                         </div>
                       )}
-                      
+
                       <p className={`text-gray-400 text-sm leading-relaxed ${isRight ? 'text-right' : 'text-left'}`}>
                         {event.desc}
                       </p>
@@ -117,34 +121,32 @@ export default function Timeline() {
 
                   <div className="md:hidden pl-4 flex-1">
                     <div
-                      className={`p-6 rounded-2xl border ${
-                        event.status === 'done'
+                      className={`p-6 rounded-2xl border ${event.status === 'done'
                           ? 'border-amber-500/20 bg-amber-500/5'
                           : event.status === 'active'
-                          ? 'border-amber-500/40 bg-amber-500/8'
-                          : 'border-white/5 bg-white/2'
-                      }`}
+                            ? 'border-amber-500/40 bg-amber-500/8'
+                            : 'border-white/5 bg-white/2'
+                        }`}
                     >
                       <div className="mb-4 flex flex-col items-start">
                         <span
-                          className={`text-xs font-semibold tracking-widest uppercase mb-2 ${
-                            event.status === 'done' || event.status === 'active'
+                          className={`text-xs font-semibold tracking-widest uppercase mb-2 ${event.status === 'done' || event.status === 'active'
                               ? 'text-amber-500'
                               : 'text-gray-600'
-                          }`}
+                            }`}
                         >
                           {event.date}
                         </span>
                         <h3 className="text-white text-xl font-bold">{event.title}</h3>
                       </div>
-                      
+
                       {event.venue && (
                         <div className="flex items-center gap-2 text-amber-500/90 text-sm font-medium mb-4 bg-amber-500/10 px-3 py-1.5 rounded-lg w-fit">
                           <MapPin size={16} className="shrink-0" />
                           <span>{event.venue}</span>
                         </div>
                       )}
-                      
+
                       <p className="text-gray-400 text-sm leading-relaxed">{event.desc}</p>
                     </div>
                   </div>
